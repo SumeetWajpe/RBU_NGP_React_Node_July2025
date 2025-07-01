@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      var aPromise = fetch("https://jsonplaceholder.typicode.com/posts");
-      aPromise.then(function (response) {
-        console.log(response);
-        let dataPromise = response.json(); // used to read the response body (actual data)
-        dataPromise.then(posts => console.log(posts));
-      });
+      //   var aPromise = fetch("https://jsonplaceholder.typicode.com/posts");
+      //   aPromise.then(function (response) {
+      //     console.log(response);
+      //     let dataPromise = response.json(); // used to read the response body (actual data)
+      //     dataPromise.then(posts => console.log(posts));
+      //   });
+
+      // OR
+
+      async function LoadPosts() {
+        try {
+          var response = await fetch(
+            "https://jsonplaceholder.typicode.com/posts",
+          );
+          if (response.ok) {
+            var posts = await response.json();
+
+            var list = document.getElementById("postsList");
+            for (const post of posts) {
+              var newListItem = document.createElement("li");
+              newListItem.innerText = post.title;
+              list.appendChild(newListItem);
+            }
+          } else {
+            throw new Error("Something went wrong !");
+          }
+        } catch (error) {
+          console.log("ErrroR !");
+          console.log(error);
+        }
+      }
+
+      LoadPosts();
     </script>
   </head>
-  <body></body>
+  <body>
+    <ul id="postsList"></ul>
+  </body>
 </html>
