@@ -21,15 +21,20 @@
       // after 10 lines
       //   PI = 3.14359;
 
-      const player = { name: "Carlos Alcaraz", age: 22 };
-      player.name = "Djokovic";
-      console.log(player);
+      //   const player = { name: "Carlos Alcaraz", age: 22 };
+      //   player.name = "Djokovic";
+      //   console.log(player);
 
       // Spread Operator - Object & Array
 
       var cars = ["BMW", "AUDI", "Merc"];
       var moreCars = ["TATA", "MAHINDRA"];
       var allCars = [...cars, ...moreCars];
+
+      // Object
+
+      var person = { name: "Carlos Alcaraz", age: 22 };
+      var player = { ...person, sport: "Tennis" };
     </script>
   </head>
   <body></body>
