@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="getData.js"></script>
-
+    <script src="GetData.js"></script>
     <script>
       console.log("Started..");
-      GetData();
+      var aPromise = GetData();
+      aPromise.then(
+        function (response) {
+          console.log(response);
+        },
+        function (err) {
+          console.log(err);
+        },
+      );
       console.log("Ended..");
     </script>
   </head>
