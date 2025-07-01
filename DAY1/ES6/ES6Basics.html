@@ -27,14 +27,27 @@
 
       // Spread Operator - Object & Array
 
+      //   var cars = ["BMW", "AUDI", "Merc"];
+      //   var moreCars = ["TATA", "MAHINDRA"];
+      //   var allCars = [...cars, ...moreCars];
+
+      //   // Object
+
+      //   var person = { name: "Carlos Alcaraz", age: 22, sport: "Lawn Tennis" };
+      //   var player = { sport: "Tennis", ...person };
+
+      // Destructuring - Arrays & Objects
+      // Arrays
       var cars = ["BMW", "AUDI", "Merc"];
-      var moreCars = ["TATA", "MAHINDRA"];
-      var allCars = [...cars, ...moreCars];
-
-      // Object
-
-      var person = { name: "Carlos Alcaraz", age: 22 };
-      var player = { ...person, sport: "Tennis" };
+      //   var firstCar, secondCar;
+      //   firstCar = cars[0];
+      //   secondCar = cars[1];
+      // OR
+      var [firstCar, , secondCar, thirdCar = "Unknown"] = [
+        "BMW",
+        "AUDI",
+        "Merc",
+      ];
     </script>
   </head>
   <body></body>
