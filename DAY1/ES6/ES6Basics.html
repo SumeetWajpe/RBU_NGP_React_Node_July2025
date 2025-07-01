@@ -38,30 +38,55 @@
 
       // Destructuring - Arrays & Objects
       // Arrays
-      var cars = ["BMW", "AUDI", "Merc"];
+      //var cars = ["BMW", "AUDI", "Merc"];
       //   var firstCar, secondCar;
       //   firstCar = cars[0];
       //   secondCar = cars[1];
       // OR
-      var [firstCar, , secondCar, thirdCar = "Unknown"] = [
-        "BMW",
-        "AUDI",
-        "Merc",
-      ];
+      //   var [firstCar, , secondCar, thirdCar = "Unknown"] = [
+      //     "BMW",
+      //     "AUDI",
+      //     "Merc",
+      //   ];
 
-      var player = { name: "Carlos Alcaraz", age: 22, sport: "Lawn Tennis" };
-      var name = player.name;
-      var sport = player.sport;
+      //   var player = { name: "Carlos Alcaraz", age: 22, sport: "Lawn Tennis" };
+      //   var name = player.name;
+      //   var sport = player.sport;
 
-      var { name, sport } = player;
+      //   var { Name, sport } = player; // Destructuring
 
-      function PrintPlayer({ name, sport }) {
-        p.name = "Djokovic";
-        console.log(p.name + " plays " + p.sport);
-      }
+      //   function PrintPlayer({ name, sport }) {
+      //     // use case
+      //     p.name = "Djokovic";
+      //     console.log(p.name + " plays " + p.sport);
+      //   }
 
-      PrintPlayer(player);
-      console.log(player);
+      //   PrintPlayer(player);
+      //   console.log(player);
+
+      //   var player = {
+      //     name: "Carlos Alcaraz",
+      //     age: 22,
+      //     details: {
+      //       isSeeded: true,
+      //       worldRanking: 2,
+      //       sport: "Lawn Tennis",
+      //       currentTitle: "French Open",
+      //     },
+      //   };
+      //var worldRanking = player.details.worldRanking;
+      // OR
+      //   var {
+      //     details: { worldRanking },
+      //   } = player;
+
+      // Using Alias
+      var player = { fname: "Carlos Alcaraz", age: 22, sport: "Lawn Tennis" };
+      var { fname: FullName, sport } = player;
+
+      
+
+
     </script>
   </head>
   <body></body>
