@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="GetData.js"></script>
+    <script>
+      async function LoadData() {
+        try {
+          var response = await GetData();
+          console.log(response.data);
+          // DOM Manipulation
+        } catch (error) {
+          console.log("Error !");
+          console.log(error);
+        }
+      }
+
+      console.log("Started..");
+      LoadData();
+      console.log("ended..");
+    </script>
+  </head>
+  <body></body>
+</html>
