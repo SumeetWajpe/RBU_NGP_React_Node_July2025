@@ -48,6 +48,20 @@
         "AUDI",
         "Merc",
       ];
+
+      var player = { name: "Carlos Alcaraz", age: 22, sport: "Lawn Tennis" };
+      var name = player.name;
+      var sport = player.sport;
+
+      var { name, sport } = player;
+
+      function PrintPlayer({ name, sport }) {
+        p.name = "Djokovic";
+        console.log(p.name + " plays " + p.sport);
+      }
+
+      PrintPlayer(player);
+      console.log(player);
     </script>
   </head>
   <body></body>
