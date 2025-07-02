@@ -87,3 +87,29 @@ class JamesBondCar extends Car {
 
 var jbc = new JamesBondCar("Aston Martin", 300, true, true);
 console.log(jbc.accelerate());
+
+// interface IPlayer {
+//   name: string;
+//   sport: string;
+// }
+
+type Player = {
+  name: string;
+  sport: string;
+};
+
+var player: Player = { name: "Djokovic", sport: "Tennis", xyz: 123 };
+
+interface IEmployee {
+  name: string;
+  salary: number;
+  getSalary: () => number;
+}
+
+class Emp implements IEmployee {
+  name: string;
+  salary: number;
+  getSalary(): number {
+    return this.salary;
+  }
+}

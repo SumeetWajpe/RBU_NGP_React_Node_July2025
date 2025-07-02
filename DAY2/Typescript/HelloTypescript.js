@@ -87,3 +87,12 @@ var JamesBondCar = /** @class */ (function (_super) {
 }(Car));
 var jbc = new JamesBondCar("Aston Martin", 300, true, true);
 console.log(jbc.accelerate());
+var player = { name: "Djokovic", sport: "Tennis", xyz: 123 };
+var Emp = /** @class */ (function () {
+    function Emp() {
+    }
+    Emp.prototype.getSalary = function () {
+        return this.salary;
+    };
+    return Emp;
+}());
