@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      console.log("Started..");
+
+      setTimeout(function () {
+        console.log("This executed after 0 second !");
+      });
+
+      var aPromise = new Promise(function (resolve, reject) {
+        resolve("Success");
+      });
+
+      aPromise.then(function (msg) {
+        console.log(msg);
+      });
+
+      console.log("Ended..");
+    </script>
+  </head>
+  <body></body>
+</html>
