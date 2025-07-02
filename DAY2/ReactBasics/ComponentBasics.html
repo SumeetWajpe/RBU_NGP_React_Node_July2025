@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.7.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/15.7.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/jsx">
+      class BasicComponent extends React.Component {
+        render() {
+          return <h1> Hello Component </h1>
+        }
+      }
+      var basicCompInst = <div>
+        <BasicComponent />
+        <BasicComponent />
+        <BasicComponent />
+        <BasicComponent />
+        <BasicComponent />
+        <BasicComponent />
+      </div>
+
+      ReactDOM.render(basicCompInst, document.getElementById("root"));
+    </script>
+  </body>
+</html>
