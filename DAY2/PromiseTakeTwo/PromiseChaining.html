@@ -20,14 +20,9 @@
           console.log("Second then !");
           throw new Error("Error !");
         })
-        .then(
-          function (res) {
-            console.log("Third then !");
-          },
-          function (err) {
-            console.log("Within Local method (catch) of second .then()");
-          },
-        )
+        .then(function (res) {
+          console.log("Third then !");
+        })
         .then(function () {
           console.log("Within Fourth then !");
         })
