@@ -60,7 +60,8 @@ class Car {
     this.speed = speed;
   }
   accelerate(): string {
-    return "The car " + this.name + " is running at " + this.speed + " kmph !";
+    //  return "The car " + this.name + " is running at " + this.speed + " kmph !";
+    return `The car ${this.name} is running at ${this.speed} kmph !`;
   }
 }
 // var carObj = new Car();

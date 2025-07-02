@@ -66,7 +66,8 @@ var Car = /** @class */ (function () {
         this.speed = speed;
     }
     Car.prototype.accelerate = function () {
-        return "The car " + this.name + " is running at " + this.speed + " kmph !";
+        //  return "The car " + this.name + " is running at " + this.speed + " kmph !";
+        return "The car ".concat(this.name, " is running at ").concat(this.speed, " kmph !");
     };
     return Car;
 }());
