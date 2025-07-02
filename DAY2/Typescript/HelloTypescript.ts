@@ -98,7 +98,7 @@ type Player = {
   sport: string;
 };
 
-var player: Player = { name: "Djokovic", sport: "Tennis", xyz: 123 };
+// var player: Player = { name: "Djokovic", sport: "Tennis", xyz: 123 }; // Error
 
 interface IEmployee {
   name: string;
@@ -113,3 +113,26 @@ class Emp implements IEmployee {
     return this.salary;
   }
 }
+
+// Generics
+var cars: string[] = ["BMW", "MERC", "ASTON MARTIN"];
+var cars: Array<string> = new Array<string>();
+
+var emps: Array<Emp> = new Array<Emp>();
+// emps[0] = 100;
+
+function Swap<T>(x: T, y: T) {
+  var temp: T;
+  temp = x;
+  x = y;
+  y = temp;
+}
+
+Swap<number>(20, 30);
+Swap<string>("Hello", "TS");
+
+class Point<T, V> {
+  x: T;
+  y: V;
+}
+var pointToBeNoted = new Point<number, string>();

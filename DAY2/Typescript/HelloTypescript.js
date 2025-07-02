@@ -87,7 +87,6 @@ var JamesBondCar = /** @class */ (function (_super) {
 }(Car));
 var jbc = new JamesBondCar("Aston Martin", 300, true, true);
 console.log(jbc.accelerate());
-var player = { name: "Djokovic", sport: "Tennis", xyz: 123 };
 var Emp = /** @class */ (function () {
     function Emp() {
     }
@@ -96,3 +95,22 @@ var Emp = /** @class */ (function () {
     };
     return Emp;
 }());
+// Generics
+var cars = ["BMW", "MERC", "ASTON MARTIN"];
+var cars = new Array();
+var emps = new Array();
+// emps[0] = 100;
+function Swap(x, y) {
+    var temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
+Swap(20, 30);
+Swap("Hello", "TS");
+var Point = /** @class */ (function () {
+    function Point() {
+    }
+    return Point;
+}());
+var pointToBeNoted = new Point();
