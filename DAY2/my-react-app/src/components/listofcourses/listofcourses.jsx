@@ -10,7 +10,7 @@ export default class ListOfCourses extends Component {
       likes: 400,
       rating: 5,
       imageUrl:
-        "https://www.loginradius.com/blog/static/00a89fc56461ea1529439d89072c93f1/701ee/react.jpg",
+        "https://framerusercontent.com/images/N0xefN2fE6CCF4G2YhAg5exTHX8.png",
       description:
         "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
     },
@@ -43,7 +43,7 @@ export default class ListOfCourses extends Component {
       likes: 200,
       rating: 3,
       imageUrl:
-        "https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2019/03/angular-blog.png?fit=1600%2C795&ssl=1",
+        "https://ionic.io/blog/wp-content/uploads/2024/02/angular-feature-image-1.png",
       description:
         "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.",
     },
