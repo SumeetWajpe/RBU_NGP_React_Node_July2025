@@ -11,10 +11,15 @@ export default class Course extends Component {
   }
 
   render() {
+    console.log("Within Render -  Course");
     let ratings = [];
     for (let index = 0; index < this.props.coursedetails.rating; index++) {
       ratings.push(
-        <i className="fa-solid fa-star" style={{ color: "orange" }}></i>,
+        <i
+          className="fa-solid fa-star"
+          key={index}
+          style={{ color: "orange" }}
+        ></i>,
       );
     }
     return (
@@ -36,7 +41,7 @@ export default class Course extends Component {
             <p className="card-text">₹.{this.props.coursedetails.price}</p>
 
             <button
-              class="btn btn-primary"
+              className="btn btn-primary"
               onClick={() => this.incrementLikes()}
             >
               {/* {this.props.coursedetails.likes} */}
