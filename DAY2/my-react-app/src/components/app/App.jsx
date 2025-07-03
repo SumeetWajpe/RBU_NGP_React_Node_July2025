@@ -5,7 +5,13 @@ import FMessage from "../functional/message.functional";
 class App extends React.Component {
   render() {
     // return <ListOfCourses />;
-    return <FMessage />;
+    return (
+      <div>
+        <FMessage msg="Hello" />
+        <FMessage msg="Hey" />
+        <FMessage msg="Hola" />
+      </div>
+    );
   }
 }
 
