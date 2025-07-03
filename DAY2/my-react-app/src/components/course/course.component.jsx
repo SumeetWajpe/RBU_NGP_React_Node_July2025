@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 
 export default class Course extends Component {
+  state = { currLikes: this.props.coursedetails.likes };
   incrementLikes() {
     console.log("U clicked !");
+    // this.props.coursedetails.likes++; // props are readonly
+    // console.log(this.props.coursedetails.likes++);
+    // this.state.currLikes++; // state are immutable
+    this.setState({ currLikes: this.state.currLikes + 1 });
   }
 
   render() {
@@ -34,7 +39,8 @@ export default class Course extends Component {
               class="btn btn-primary"
               onClick={() => this.incrementLikes()}
             >
-              {this.props.coursedetails.likes}{" "}
+              {/* {this.props.coursedetails.likes} */}
+              {this.state.currLikes}
               <i className="fa-solid fa-thumbs-up"></i>
             </button>
           </div>
