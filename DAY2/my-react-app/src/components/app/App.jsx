@@ -2,11 +2,13 @@ import React from "react";
 import ListOfCourses from "../listofcourses/listofcourses";
 import FMessage from "../functional/message.functional";
 import Counter from "../functional/counter";
+import Posts from "../posts/posts";
 
 function App() {
   return (
     <div>
-      <Counter />
+      {/* <Counter /> */}
+      <Posts />
     </div>
   );
 }
