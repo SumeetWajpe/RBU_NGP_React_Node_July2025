@@ -62,7 +62,7 @@ export default class ListOfCourses extends Component {
 
   render() {
     return (
-      <div>
+      <div className="row">
         {this.courses.map(course => (
           <Course coursedetails={course} />
         ))}
