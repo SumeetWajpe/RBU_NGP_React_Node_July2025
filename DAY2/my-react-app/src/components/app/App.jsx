@@ -3,10 +3,12 @@ import ListOfCourses from "../listofcourses/listofcourses";
 import FMessage from "../functional/message.functional";
 import Counter from "../functional/counter";
 import Posts from "../posts/posts";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
+      <Link to="/"> Courses </Link> |<Link to="/posts"> Posts </Link> |
+      <Link to="/counter"> Counter </Link>
       <Routes>
         <Route path="/" Component={ListOfCourses} />
         <Route path="/posts" Component={Posts} />
