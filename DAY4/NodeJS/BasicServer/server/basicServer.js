@@ -22,6 +22,16 @@ const server = http.createServer((req, res) => {
         res.end("Something went wrong !");
       }
     });
+  } else if (req.url == "/styles.css") {
+    fs.readFile("../client/styles.css", (err, data) => {
+      if (!err) {
+        res.writeHead(200, { "Content-Type": "text/css" });
+        res.end(data);
+      } else {
+        res.writeHead(500, { "Content-Type": "text/html" });
+        res.end("Something went wrong !");
+      }
+    });
   }
 });
 
