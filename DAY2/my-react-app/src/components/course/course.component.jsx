@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Rating from "../rating/rating";
 
 export default class Course extends Component {
   state = { currLikes: this.props.coursedetails.likes };
@@ -13,16 +14,7 @@ export default class Course extends Component {
 
   render() {
     console.log("Within Render -  Course");
-    let ratings = [];
-    for (let index = 0; index < this.props.coursedetails.rating; index++) {
-      ratings.push(
-        <i
-          className="fa-solid fa-star"
-          key={index}
-          style={{ color: "orange" }}
-        ></i>,
-      );
-    }
+
     return (
       <div className="col-md-3 my-1">
         <div className="card">
@@ -38,9 +30,7 @@ export default class Course extends Component {
           <div className="card-body">
             <h5 className="card-title">{this.props.coursedetails.title}</h5>
             <p className="card-text">
-              {/* Rating : {this.props.coursedetails.rating} */}
-
-              {ratings}
+              <Rating noofstars={this.props.coursedetails.rating} />
             </p>
             <p className="card-text">₹.{this.props.coursedetails.price}</p>
 
@@ -58,5 +48,3 @@ export default class Course extends Component {
     );
   }
 }
-
-

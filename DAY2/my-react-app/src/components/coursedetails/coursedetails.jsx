@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Rating from "../rating/rating";
 
 function CourseDetails() {
   const [thePost, setThePost] = useState({});
@@ -18,6 +19,9 @@ function CourseDetails() {
       </div>
       <div className="col-md-3">
         <h2>{thePost.title}</h2>
+        <Rating noofstars={thePost.rating} />
+        <p>₹.{thePost.price}</p>
+        <p>{thePost.description}</p>
       </div>
     </div>
   );
