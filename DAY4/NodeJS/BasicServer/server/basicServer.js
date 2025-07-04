@@ -32,6 +32,14 @@ const server = http.createServer((req, res) => {
         res.end("Something went wrong !");
       }
     });
+  } else if (req.url == "/products") {
+    var products = [
+      { id: 1, name: "LED TV", price: 50000 },
+      { id: 2, name: "MacBookPro", price: 250000 },
+      { id: 3, name: "DJI Mavic Pro", price: 450000 },
+    ];
+    res.writeHead(200, { "Content-type": "application/json" });
+    res.end(JSON.stringify(products));
   }
 });
 
