@@ -7,9 +7,17 @@ import Message from "./components/message/message";
 function App() {
   const [count, setCount] = useState<number>(100);
 
+  let messageOne = 
+  { msg: "Hey",
+     from:
+     "John", 
+     to: "Carter" };
   return (
     <>
-      <Message msg={10000} />
+      {/* <Message  xyz="kdhksjdhsjdh" /> */} {/* Error */}
+      {/* <Message  msg={10000} /> */} {/* Error */}
+      <Message 
+      messagedetails={messageOne} />
     </>
   );
 }
