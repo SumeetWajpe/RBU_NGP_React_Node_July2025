@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Course extends Component {
   state = { currLikes: this.props.coursedetails.likes };
@@ -25,12 +26,15 @@ export default class Course extends Component {
     return (
       <div className="col-md-3 my-1">
         <div className="card">
-          <img
-            src={this.props.coursedetails.imageUrl}
-            className="card-img-top"
-            alt={this.props.coursedetails.title}
-            height="175px"
-          />
+          <Link to="/coursedetails">
+            <img
+              src={this.props.coursedetails.imageUrl}
+              className="card-img-top"
+              alt={this.props.coursedetails.title}
+              height="175px"
+            />
+          </Link>
+
           <div className="card-body">
             <h5 className="card-title">{this.props.coursedetails.title}</h5>
             <p className="card-text">

@@ -4,13 +4,16 @@ import FMessage from "../functional/message.functional";
 import Counter from "../functional/counter";
 import Posts from "../posts/posts";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import CourseDetails from "../coursedetails/coursedetails";
+import Header from "../header/header";
 function App() {
   return (
     <BrowserRouter>
-      <Link to="/"> Courses </Link> |<Link to="/posts"> Posts </Link> |
-      <Link to="/counter"> Counter </Link>
+      <Header />
       <Routes>
         <Route path="/" Component={ListOfCourses} />
+        <Route path="/coursedetails" Component={CourseDetails} />
+
         <Route path="/posts" Component={Posts} />
         <Route path="/counter" Component={Counter} />
         <Route
