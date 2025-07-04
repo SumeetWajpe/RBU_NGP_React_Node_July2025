@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" Component={ListOfCourses} />
-        <Route path="/coursedetails" Component={CourseDetails} />
+        <Route path="/coursedetails/:id" Component={CourseDetails} />
 
         <Route path="/posts" Component={Posts} />
         <Route path="/counter" Component={Counter} />

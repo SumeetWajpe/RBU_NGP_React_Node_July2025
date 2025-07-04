@@ -26,7 +26,7 @@ export default class Course extends Component {
     return (
       <div className="col-md-3 my-1">
         <div className="card">
-          <Link to="/coursedetails">
+          <Link to={`/coursedetails/${this.props.coursedetails.id}`}>
             <img
               src={this.props.coursedetails.imageUrl}
               className="card-img-top"
@@ -58,3 +58,5 @@ export default class Course extends Component {
     );
   }
 }
+
+
