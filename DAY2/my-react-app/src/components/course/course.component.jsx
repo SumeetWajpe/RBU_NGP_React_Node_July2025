@@ -13,7 +13,7 @@ export default class Course extends Component {
   }
 
   render() {
-    console.log("Within Render -  Course");
+    // console.log("Within Render -  Course");
 
     return (
       <div className="col-md-3 my-1">
@@ -41,6 +41,9 @@ export default class Course extends Component {
               {/* {this.props.coursedetails.likes} */}
               {this.state.currLikes}
               <i className="fa-solid fa-thumbs-up"></i>
+            </button>
+            <button className="btn btn-danger mx-1">
+              <i class="fa-solid fa-trash"></i>
             </button>
           </div>
         </div>

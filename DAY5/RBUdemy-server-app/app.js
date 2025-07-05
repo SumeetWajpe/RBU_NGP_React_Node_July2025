@@ -3,21 +3,21 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
-
+var cors = require("cors");
 // Router
 var coursesRouter = require("./routes/courses");
-// app 
+// app
 var app = express();
 // mongoose connection
 mongoose.connect("mongodb://127.0.0.1:27017/RBUdemyDB");
 
-
+// middlewares
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use(cors()); // enable CORS
 app.use("/courses", coursesRouter);
 
 module.exports = app;

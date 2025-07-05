@@ -6,7 +6,7 @@ var ListOfCourses = () => {
   const [courses, setCourses] = useState([]);
   useEffect(function () {
     axios
-      .get("http://localhost:3500/courses")
+      .get("http://localhost:3000/courses")
       .then(res => setCourses(res.data));
   }, []);
   return (
