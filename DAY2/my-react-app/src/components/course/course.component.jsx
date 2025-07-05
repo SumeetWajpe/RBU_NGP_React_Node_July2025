@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Rating from "../rating/rating";
+import axios from "axios";
 
 export default class Course extends Component {
   state = { currLikes: this.props.coursedetails.likes };
@@ -42,7 +43,17 @@ export default class Course extends Component {
               {this.state.currLikes}
               <i className="fa-solid fa-thumbs-up"></i>
             </button>
-            <button className="btn btn-danger mx-1">
+            <button
+              className="btn btn-danger mx-1"
+              onClick={async () => {
+                const deleteMsg = await axios.delete(
+                  `http://localhost:3000/courses/delete/${this.props.coursedetails.id}`,
+                );
+                if (deleteMsg.status) {
+                  // update the UI
+                }
+              }}
+            >
               <i class="fa-solid fa-trash"></i>
             </button>
           </div>
