@@ -11,5 +11,5 @@ export default function Rating(props) {
       ></i>,
     );
   }
-  return <div>{ratings}</div>;
+  return <>{ratings}</>;
 }

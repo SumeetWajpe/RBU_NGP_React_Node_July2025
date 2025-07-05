@@ -4,6 +4,12 @@ import axios from "axios";
 
 var ListOfCourses = () => {
   const [courses, setCourses] = useState([]);
+
+  const deleteCourse = id => {
+    const newCourses = courses.filter(c => c.id !== id);
+    setCourses(newCourses);
+  };
+
   useEffect(function () {
     axios
       .get("http://localhost:3000/courses")
@@ -12,7 +18,11 @@ var ListOfCourses = () => {
   return (
     <div className="row">
       {courses.map(course => (
-        <Course coursedetails={course} key={course.id} />
+        <Course
+          coursedetails={course}
+          key={course.id}
+          deletecourse={id => deleteCourse(id)}
+        />
       ))}
     </div>
   );

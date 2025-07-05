@@ -6,6 +6,7 @@ import Posts from "../posts/posts";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import CourseDetails from "../coursedetails/coursedetails";
 import Header from "../header/header";
+import GrandParent from "../context/context";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,8 @@ function App() {
 
         <Route path="/posts" Component={Posts} />
         <Route path="/counter" Component={Counter} />
+        <Route path="/contextapi" Component={GrandParent} />
+
         <Route
           path="*"
           element={
